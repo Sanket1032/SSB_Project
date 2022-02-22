@@ -3,20 +3,44 @@
   justify-content: space-between;
   align-items: center;
   height: auto;
-  width:100%;
+  width: 100%;
 }
 .Logo img {
   height: 100px;
 }
 .Header_links {
   height: 100px;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
 .links {
   text-decoration: none;
   color: black;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 0px 10px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.links:hover {
+  transform: scale(1.01);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+}
+.links::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  /* background-color: rgb(104, 219, 104); */
+  background-color: #4e8937;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@media (hover: hover) {
+  .links:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }

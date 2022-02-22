@@ -1,25 +1,15 @@
-import logo from './logo.svg';
+import Header from './component/Header/Header';
+import Tiranga from './image/tiranga-bg.jpg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App=()=>{
+  return(
+    <div className="mainApp">
+      <img src={Tiranga} className="main_img"></img>
+      <div className="subApp">
+        <Header />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

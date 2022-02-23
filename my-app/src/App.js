@@ -1,5 +1,6 @@
 import Header from './component/Header/Header';
 import Tiranga from './image/tiranga-bg.jpg';
+import Landing from './component/Landing/Landing';
 import './App.css';
 const App=()=>{
   return(
@@ -7,6 +8,7 @@ const App=()=>{
       <img src={Tiranga} className="main_img"></img>
       <div className="subApp">
         <Header />
+        <Landing />
       </div>
     </div>
   );

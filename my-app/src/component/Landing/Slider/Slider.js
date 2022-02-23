@@ -30,6 +30,7 @@ const Slider = () => {
                 return (
                     <div key={item.id} className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
                         <img src={item.image}></img>
+                        <p className="slide_quote">{item.quote}</p>
                     </div>
                 )
             })}
@@ -37,11 +38,11 @@ const Slider = () => {
             <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
             <div className="container-dots">
-                {Array.from({ length: 4 }).map((item, index) => (
-                    <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 1 ? "dot active" : "dot"}></div>      
+                {Array.from({ length: DataSlider.length }).map((item, index) => (
+                    <div onClick={() => moveDot(index + 1)} className={slideIndex === index + 1 ? "dot active" : "dot"}></div>
                 ))}
             </div>
-         </div>
+        </div>
     );
 };
 

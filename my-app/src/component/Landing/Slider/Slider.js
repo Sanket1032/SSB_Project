@@ -1,5 +1,5 @@
 import DataSlider from './DataSlider';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Slider.css';
 import BtnSlider from './BtnSlider';
 
@@ -24,6 +24,12 @@ const Slider = () => {
     const moveDot = (index) => {
         setSlideIndex(index);
     }
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 4000);
+        return () => {
+            clearInterval(interval);
+        }
+    });
     return (
         <div className="container-slider">
             {DataSlider.map((item, index) => {

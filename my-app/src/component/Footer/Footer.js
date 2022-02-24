@@ -11,16 +11,20 @@ const Footer = () => {
                     <img src={LogoName} className="Logo_name"></img>
                 </div>
                 <div className="Footer_Form">
-                    <form>
+                    <form className="Footer_Form_main">
                         <input id="Name" className="form_input" type="text" placeholder="Name"></input>
                         <input id="Email" className='form_input' type="email" placeholder="Email"></input>
-                        <textarea className="form_input" id="textarea" col="5" rows="5" placeholder="Type your message here..."></textarea>
+                        <textarea id="textarea" rows="5" placeholder="Type your message here..."></textarea>
+                        <div className="button" id="button_3">
+                            <div id="circle"></div>
+                            <button type="submit" className="submit">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
             <div className="lowerFooter">
                 <p className="Disclaimer">Hey..You are looking at this masterpiece. So if you like this website, give the owner a peri peri treat ;).</p>
-                <p className="copyright">All Rights Reserved</p>
+                <p className="copyright">@2021 Service Preparatory Academy: All Rights Reserved</p>
             </div>
         </div>
     );

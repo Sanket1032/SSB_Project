@@ -1,0 +1,109 @@
+.Footer {
+  width: 100%;
+}
+.upperFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  padding: 2rem 0;
+}
+.Footer_Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.Logo_image {
+  width: 10rem;
+}
+.Logo_name {
+  width: 20rem;
+}
+.Footer_Form {
+  width: 50%;
+  height: 100%;
+}
+.Footer_Form_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form_input {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: 4px;
+  height: 2rem;
+  border: 1px solid #4e8937;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+#textarea {
+  width: 80%;
+  border: 1px solid #4e8937;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 4px;
+}
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #bfc0c0;
+  margin: 10px;
+  color: #bfc0c0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#button_3 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#button_3 .submit {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+#circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  border-radius: 50%;
+  background: #4e8937;
+  position: absolute;
+  transition: all 0.45s ease-out;
+  width: 100px;
+  top: 20px;
+  left: 25px;
+}
+.submit {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+#button_3:hover #circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+#button_3:hover .submit {
+  color: white;
+}
+.Disclaimer {
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  font-size: 14px;
+}

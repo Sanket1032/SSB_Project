@@ -1,19 +1,22 @@
-const Ssb_leftpanel=(props)=>{
-    return(
+import Ssb_subleft from './Ssb_subleft';
+import ssb_data from './ssb_data';
+
+const Ssb_leftpanel = () => {
+    return (
         <div className="leftPanel">
-            {props.ssb_data.map((item) => {
+            {ssb_data.map((item) => {
                 return (
                     <>
                         <div className="main-topic">{item.question}</div>
-                        <ul className="sub-topic">
-                            {props.ssb_data.subquestion.map((element) => {
+                        <div className="sub-topic">
+                            <Ssb_subleft subitems={item.subquestion} />
+                            {/* {item.subquestion.map((element) => {
                                 return (
-                                    <>
-                                        <li className="sub-question">{element.question1}</li>
-                                    </>
+                                    <li className="sub-question">{element.question1}</li>
+                                    <Ssb_subleft element={element.question1} />
                                 )
-                            })}
-                        </ul>
+                            })} */}
+                        </div>
                     </>
                 )
             })}

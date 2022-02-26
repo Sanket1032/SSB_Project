@@ -6,11 +6,29 @@ const Header = () => {
         <div className="Header">
             <div className="Logo"><img src={Logo}></img></div>
             <div className="Header_links">
-                <a href="#" className="links">Home</a>
-                <a href="#" className="links">About</a>
-                <a href="#" className="links">Life</a>
-                <a href="#" className="links">SSB</a>
-                <a href="#" className="links">Contact Us</a>
+                <ul>
+                    <li className="Header_links_sub">
+                        <a href="#" className="links">Home</a>
+                    </li>
+                    <li className="Header_links_sub" id="about">
+                        <a href="#" className="links">About</a>
+                        <ul className="subHeader">
+                            <li className="subHeader_link"><a href="#">How To Join</a></li>
+                            <li className="subHeader_link"><a href="#">Gallantry Awards</a></li>
+                            <li className="subHeader_link"><a href="#">The Ethos of Indian Army</a></li>
+                        </ul>
+                    </li>
+                    <li className="Header_links_sub">
+                        <a href="#" className="links">Life</a>
+                    </li>
+                    <li className="Header_links_sub">
+                        <a href="#" className="links">SSB</a>
+                    </li>
+                    <li className="Header_links_sub">
+                        <a href="#" className="links">Contact Us</a>
+                    </li>
+
+                </ul>
             </div>
         </div>
     );

@@ -20,11 +20,12 @@
   padding: 10px 15px;
   margin: 0px 10px;
   position: relative;
+  font-weight: 600;
   transition: all 0.2s ease-in-out;
 }
 .links:hover {
-  transform: scale(1.01);
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  text-shadow: 1px 1px rgba(170, 170, 170, 0.8);
 }
 .links::before {
   content: "";
@@ -35,7 +36,44 @@
   height: 3px;
   /* background-color: rgb(104, 219, 104); */
   background-color: #4e8937;
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: width 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.Header_links ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.Header_links_sub {
+  list-style: none;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.subHeader {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: #4e8937;
+  z-index: 2;
+  width: 200px;
+  opacity: 0;
+  top: 100%;
+  left: 0;
+}
+#about:hover ~ .subHeader {
+  opacity: 1;
+}
+.subHeader_link {
+  list-style-type: none;
+  overflow: hidden;
+  display: none;
+}
+.subHeader_link a {
+  text-decoration: none;
+  color: black;
 }
 @media (hover: hover) {
   .links:hover::before {

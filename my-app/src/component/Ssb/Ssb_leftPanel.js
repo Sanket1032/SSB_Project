@@ -1,21 +1,17 @@
 import Ssb_subleft from './Ssb_subleft';
 import ssb_data from './ssb_data';
+import './Ssb.css';
+// import { useState } from 'react';
 
-const Ssb_leftpanel = () => {
+const Ssb_leftpanel = (props) => {
+    // const [subQuestionOpen, setSubQuestionOpen] = useState(false);
     return (
         <div className="leftPanel">
             {ssb_data.map((item) => {
                 return (
                     <>
-                        <div className="main-topic">{item.question}</div>
-                        <div className="sub-topic">
-                            <Ssb_subleft subitems={item.subquestion} />
-                            {/* {item.subquestion.map((element) => {
-                                return (
-                                    <li className="sub-question">{element.question1}</li>
-                                    <Ssb_subleft element={element.question1} />
-                                )
-                            })} */}
+                        <div className={`sub-topic`} >
+                            <Ssb_subleft moveup={(v) => { props.moveUp(v) }} items={item} subitems={item.subquestion} />
                         </div>
                     </>
                 )
